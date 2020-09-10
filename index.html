@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a class on click demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a class on click demo with vanilla javascript</h1>
+        <p>
+            Click on the emoji to toggle the class <code>green</code> on the block below.
+        </p>
+        <p>When the class on the block contains <code>green</code> the background is green, else it is blue.</p>
+        <div class="toggle">Click me! 🤗</div>
+        <div class="block"></div>
+    </div>
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const block = document.querySelector('.block');
+
+        toggle.addEventListener('click', () => {
+            block.classList.toggle('green');
+        });
+    </script>
+</body>
+</html>
